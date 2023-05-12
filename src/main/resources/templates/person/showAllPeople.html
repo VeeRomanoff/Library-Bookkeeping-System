@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All People</title>
+</head>
+<body>
+
+<h1>
+  All people are presented below
+</h1>
+
+<div th:each="person : ${people}">
+    <a th:href="@{people/{id}(id=${person.getId()})}" th:text="${person.getFullName()}">person</a>
+</div>
+
+<hr>
+
+<a th:href="@{/people/add}">Add another person</a>
+
+<br>
+
+<a th:href="@{/}">Go to main menu</a>
+
+</body>
+</html>
